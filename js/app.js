@@ -25,7 +25,7 @@ const API_BASE = 'https://api.restcountries.com/countries/v5';
 // ATTENTION : ne jamais pousser une vraie clé sur un dépôt GitHub public.
 // Ici la clé est isolée dans une seule variable pour qu'elle soit facile
 // à retirer ou à remplacer avant la remise finale.
-const API_KEY = 'rc_live_74c6f74b45154550b33252c792e94645';
+const API_KEY = 'rc_live....etc....
 
 // Réinitialise l'état d'erreur du champ de recherche
 function clearInputError() {
