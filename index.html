@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Mondial Interactif</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="logo-mark" aria-hidden="true">&#9679;</span>
+      <h1>Atlas Mondial Interactif</h1>
+    </div>
+    <nav aria-label="Navigation principale">
+      <a href="#recherche">Rechercher</a>
+      <a href="#resultat">Fiche pays</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="recherche" class="search-section" aria-labelledby="search-title">
+      <h2 id="search-title" class="visually-hidden">Formulaire de recherche</h2>
+
+      <form id="country-form" class="search-form" novalidate>
+        <label for="country-input">Nom du pays</label>
+        <div class="search-row">
+          <input
+            type="text"
+            id="country-input"
+            name="country"
+            placeholder="Ex : Haiti, France, Japon..."
+            autocomplete="off"
+          >
+          <button type="submit">Rechercher</button>
+        </div>
+        <p id="input-error" class="error-message" hidden></p>
+      </form>
+    </section>
+
+    <section id="resultat" class="result-section" aria-live="polite" aria-labelledby="result-title">
+      <h2 id="result-title" class="visually-hidden">Résultat de la recherche</h2>
+
+      <div id="loading" class="loading" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Chargement...</p>
+      </div>
+
+      <p id="status-message" class="status-message" hidden></p>
+
+      <article id="country-card" class="country-card" hidden>
+        <div class="flag-wrap">
+          <img id="flag-img" src="images/placeholder.png" alt="Drapo peyi">
+        </div>
+        <div class="card-body">
+          <h3 id="country-name">Chargement...</h3>
+          <dl class="country-details">
+            <div class="detail-row">
+              <dt>Capitale</dt>
+              <dd id="country-capital"></dd>
+            </div>
+            <div class="detail-row">
+              <dt>Population</dt>
+              <dd id="country-population"></dd>
+            </div>
+            <div class="detail-row">
+              <dt>Région</dt>
+              <dd id="country-region"></dd>
+            </div>
+            <div class="detail-row">
+              <dt>Monnaie</dt>
+              <dd id="country-currency"></dd>
+            </div>
+            <div class="detail-row">
+              <dt>Langues</dt>
+              <dd id="country-languages"></dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Devoir 2 &mdash; LOG3500, Été 2026 &mdash; API : REST Countries v3.1</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
